@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    ```
+    <meta name="description" content="A responsive modern image gallery with lightbox preview">
+    <title>Visualia | Image Gallery</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    ```
+
+</head>
+
+<body>
+
+    ```
+    <!-- Background Decoration -->
+    <div class="background-glow glow-one"></div>
+    <div class="background-glow glow-two"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="brand">
+            <div class="brand-icon">✦</div>
+            <div>
+                <h1>Visualia</h1>
+                <p>Explore beautiful moments</p>
+            </div>
+        </div>
+
+        <div class="photo-count">
+            <span id="galleryCount">10</span> Photos
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <span class="hero-tag">✦ MY COLLECTION</span>
+
+        <h2>
+            A Gallery of
+            <span>Beautiful Moments</span>
+        </h2>
+
+        <p>
+            Explore a collection of stunning landscapes, nature,
+            architecture and unforgettable views.
+        </p>
+    </section>
+
+    <!-- Gallery -->
+    <main class="gallery" id="gallery">
+
+        <div class="gallery-item large">
+            <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1200&q=85"
+                alt="Beautiful mountain landscape">
+            <div class="image-overlay">
+                <span>Mountain Escape</span>
+                <button class="view-btn" aria-label="View Mountain Escape">↗</button>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=85"
+                alt="Ocean waves and tropical beach">
+            <div class="image-overlay">
+                <span>Ocean Breeze</span>
+                <button class="view-btn" aria-label="View Ocean Breeze">↗</button>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=900&q=85"
+                alt="Green valley surrounded by mountains">
+            <div class="image-overlay">
+                <span>Green Valley</span>
+                <button class="view-btn" aria-label="View Green Valley">↗</button>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?auto=format&fit=crop&w=900&q=85"
+                alt="Sunlit green mountain valley">
+            <div class="image-overlay">
+                <span>Nature Light</span>
+                <button class="view-btn" aria-label="View Nature Light">↗</button>
+            </div>
+        </div>
+
+        <div class="gallery-item tall">
+            <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=900&q=85"
+                alt="Snow covered mountain under a starry sky">
+            <div class="image-overlay">
+                <span>Night Mountains</span>
+                <button class="view-btn" aria-label="View Night Mountains">↗</button>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=900&q=85"
+                alt="Sunlight passing through a forest">
+            <div class="image-overlay">
+                <span>Forest Walk</span>
+                <button class="view-btn" aria-label="View Forest Walk">↗</button>
+            </div>
+        </div>
+
+        <div class="gallery-item large">
+            <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=85"
+                alt="Rocky mountain peaks">
+            <div class="image-overlay">
+                <span>Rocky Peaks</span>
+                <button class="view-btn" aria-label="View Rocky Peaks">↗</button>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=900&q=85"
+                alt="Mountain scenery with dramatic sky">
+            <div class="image-overlay">
+                <span>Wild Horizon</span>
+                <button class="view-btn" aria-label="View Wild Horizon">↗</button>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?auto=format&fit=crop&w=900&q=85"
+                alt="Forest landscape with mountains">
+            <div class="image-overlay">
+                <span>Into The Wild</span>
+                <button class="view-btn" aria-label="View Into The Wild">↗</button>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=900&q=85"
+                alt="Beautiful natural landscape">
+            <div class="image-overlay">
+                <span>Earth & Sky</span>
+                <button class="view-btn" aria-label="View Earth and Sky">↗</button>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+
+        <button class="close-btn" id="closeBtn" aria-label="Close preview">
+            &times;
+        </button>
+
+        <button class="nav-btn prev-btn" id="prevBtn" aria-label="Previous image">
+            &#10094;
+        </button>
+
+        <div class="preview-container">
+
+            <div class="preview-top">
+                <span id="imageNumber">01 / 10</span>
+                <span id="imageTitle">Mountain Escape</span>
+            </div>
+
+            <img id="previewImage" src="" alt="Image preview">
+
+            <div class="preview-bottom">
+                <p id="imageDescription">
+                    Beautiful image from the gallery.
+                </p>
+            </div>
+
+        </div>
+
+        <button class="nav-btn next-btn" id="nextBtn" aria-label="Next image">
+            &#10095;
+        </button>
+
+    </div>
+
+    <footer>
+        <p>Made with HTML • CSS • JavaScript</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
